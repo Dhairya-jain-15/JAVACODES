@@ -20,7 +20,20 @@ public class Number_Utility {
                 System.out.println("prime");
         }
         static void ispalindrome(int pal){
-            
+            int og=pal;
+            int ans=0;
+            for (int i=0;pal>0;i++) {
+                int temp=pal%10;
+                ans=temp+ans*10;
+                pal=pal/10;  
+            }
+            if(ans==og){
+                System.out.println("palindrome");
+                return;
+            }
+            else{
+                System.out.println("Not palindrome");
+            }
         }
         static void armstrong(){
             
