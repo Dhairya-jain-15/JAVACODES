@@ -1,9 +1,8 @@
 package JAVACODES;
+import java.lang.Math;
+import java.util.Scanner;
 // Check prime number
 // Palindrome number
-
-import java.util.Scanner;
-import java.lang.Math;
 // Armstrong number
 // Factorial & Fibonacci
 
@@ -45,7 +44,7 @@ public class Number_Utility {
             count++;
         }
         c = num;
-        while (c>0) {
+        while (c > 0) {
             int digit = c % 10;
             total = total + (int) Math.pow(digit, count);
             c = c / 10;
@@ -57,12 +56,24 @@ public class Number_Utility {
         }
     }
 
-    static void factorial() {
-
+    static int factorial(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        return n * factorial(n - 1);
     }
 
-    static void fabonacci() {
+    static void fibonacci(int n) {
+        int a = 0, b = 1;
 
+        System.out.print(a + " " + b + " ");
+
+        for (int i = 2; i < n; i++) {
+            int c = a + b;
+            System.out.print(c + " ");
+            a = b;
+            b = c;
+        }
     }
 
     public static void main(String[] args) {
@@ -92,10 +103,15 @@ public class Number_Utility {
                 armstrong(num);
                 break;
             case 4:
-                factorial();
+                System.out.print("enter number: ");
+                int fact = s.nextInt();
+                int res = factorial(fact);
+                System.out.println(res);
                 break;
             case 5:
-                fabonacci();
+                System.out.print("enter number: ");
+                num = s.nextInt();
+                fibonacci(num);
                 break;
             default:
                 throw new AssertionError();
