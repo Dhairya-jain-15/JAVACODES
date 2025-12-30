@@ -83,7 +83,7 @@ public class Number_Utility {
         System.out.println("2. palindrome");
         System.out.println("3. armstrong");
         System.out.println("4. factorial");
-        System.out.println("5. fabonacci");
+        System.out.println("5. fibonacci");
         System.out.print("Enter your choice: ");
         int option = s.nextInt();
         switch (option) {

@@ -1,5 +1,4 @@
 package JAVACODES;
-
 import java.util.Scanner;
 
 public class ATM_Simulation {
