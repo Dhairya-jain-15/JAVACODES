@@ -1,21 +1,27 @@
 package JAVACODES;
-import java.util.Scanner;
-public class Student_Management {
 
+import java.util.Scanner;
+import java.util.ArrayList;
+public class Student_Management {
+    
     //add student
     static public class Add_student {
+        
+        ArrayList<Integer> idlist=new ArrayList<>();
+        ArrayList<String> name=new ArrayList<>();
+        ArrayList<String> standard=new ArrayList<>();
+        ArrayList<Integer> marks=new ArrayList<>();
 
-        public Add_student(String name, String standard, int id, int marks) {
-            id++;
-            System.out.println(id);
-            System.out.println(name);
-            System.out.println(standard);
-            System.out.println(marks);
+        public Add_student(int id,String n,String st , int m) {
+            idlist.add(id);
+            name.add(n);
+            standard.add(st);
+            marks.add(m);
         }
     }
+
     //display detail
     //update marks
-
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("======================================================");
@@ -29,19 +35,21 @@ public class Student_Management {
         System.out.println("======================================================");
         switch (Choice) {
             case 1:
-                int n;
-                n=s.nextInt();
-                Add_student[] students = new Add_student[n];
-                String name;
-                name = s.next();
+                int id;
+                String n;
                 String standard;
-                standard = s.next();
-                int marks;
-                marks = s.nextInt();
-                for (int i = 0; i < n; i++) {
-                    students[i] = new Add_student(name,standard, i + 1, marks);
-                }
-                main(args);
+                int m;
+                for (int i = 0; i <= 1; i++) {
+                System.out.println("enter id: ");
+                id=s.nextInt();
+                System.out.println("enter name: ");
+                n=s.nextLine();
+                System.out.println("enter class: ");
+                standard=s.nextLine();
+                System.out.println("enter marks: ");
+                m=s.nextInt();
+                Add_student st = new Add_student(id,n,standard,m);
+                }                
                 break;
             case 2:
 
