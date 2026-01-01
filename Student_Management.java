@@ -1,7 +1,7 @@
 package JAVACODES;
 
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 public class Student_Management {
     
     //add student
@@ -18,7 +18,17 @@ public class Student_Management {
             standard.add(st);
             marks.add(m);
         }
+        public void display(){
+            System.out.println("STUDENT DETAIL");
+        }
+        public void update_mark(){
+            
+        }
+        public void exit(){
+            return;
+        }
     }
+    
 
     //display detail
     //update marks
