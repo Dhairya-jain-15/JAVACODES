@@ -24,9 +24,6 @@ public class Student_Management {
         public void update_mark(){
             
         }
-        public void exit(){
-            return;
-        }
     }
     
 
@@ -62,10 +59,10 @@ public class Student_Management {
                 }                
                 break;
             case 2:
-
+                display();
                 break;
             case 3:
-
+                update_mark();
                 break;
             case 4:
                 System.out.println("THANK YOU");
