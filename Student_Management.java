@@ -3,7 +3,6 @@ package JAVACODES;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Student_Management {
-    
     //add student
     static public class Add_student {
         
@@ -12,23 +11,22 @@ public class Student_Management {
         ArrayList<String> standard=new ArrayList<>();
         ArrayList<Integer> marks=new ArrayList<>();
 
-        public Add_student(int id,String n,String st , int m) {
+        public void addstudent(int id,String n,String st , int m) {
             idlist.add(id);
             name.add(n);
             standard.add(st);
             marks.add(m);
         }
-        public void display(){
+        private void display(int id){
             System.out.println("STUDENT DETAIL");
+            for (int i = 0; i < idlist.size(); i++) {
+                System.out.println(this.idlist.get(i));
+            }
         }
         public void update_mark(){
             
         }
     }
-    
-
-    //display detail
-    //update marks
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("======================================================");
@@ -40,29 +38,31 @@ public class Student_Management {
         System.out.print("Enter choice: ");
         int Choice = s.nextInt();
         System.out.println("======================================================");
+        Add_student st = new Add_student();
         switch (Choice) {
             case 1:
                 int id;
                 String n;
                 String standard;
                 int m;
-                for (int i = 0; i <= 1; i++) {
                 System.out.println("enter id: ");
                 id=s.nextInt();
+                s.nextLine();
                 System.out.println("enter name: ");
                 n=s.nextLine();
                 System.out.println("enter class: ");
                 standard=s.nextLine();
                 System.out.println("enter marks: ");
                 m=s.nextInt();
-                Add_student st = new Add_student(id,n,standard,m);
-                }                
-                break;
+                st.addstudent(id,n,standard,m);
+            break;
             case 2:
-                display();
+                int show;
+                show=s.nextInt();
+                st.display(show);
                 break;
             case 3:
-                update_mark();
+                st.update_mark();
                 break;
             case 4:
                 System.out.println("THANK YOU");
@@ -70,5 +70,6 @@ public class Student_Management {
             default:
                 throw new AssertionError();
         }
+        main(args);
     }
 }
