@@ -1,33 +1,40 @@
 package JAVACODES;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Student_Management {
     //add student
     static public class Add_student {
-        
+      
         ArrayList<Integer> idlist=new ArrayList<>();
         ArrayList<String> name=new ArrayList<>();
         ArrayList<String> standard=new ArrayList<>();
         ArrayList<Integer> marks=new ArrayList<>();
-
+        
         public void addstudent(int id,String n,String st , int m) {
             idlist.add(id);
             name.add(n);
             standard.add(st);
             marks.add(m);
         }
-        private void display(int id){
+        private void detail(){
             System.out.println("STUDENT DETAIL");
-            for (int i = 0; i < idlist.size(); i++) {
+            for (int i = 0; i <idlist.size(); i++) {
                 System.out.println(this.idlist.get(i));
+                System.out.println(this.name.get(i));
+                System.out.println(this.standard.get(i));
+                System.out.println("======================================================");
             }
         }
         public void update_mark(){
             
         }
+        
     }
     public static void main(String[] args) {
+        Add_student st = new Add_student();
+        Display(st);
+    }
+    private static void Display(Add_student st){
         Scanner s = new Scanner(System.in);
         System.out.println("======================================================");
         System.out.println("STUDENT MANAGEMENT");
@@ -35,10 +42,10 @@ public class Student_Management {
         System.out.println("2. Display Student Detail");
         System.out.println("3. Update Marks");
         System.out.println("4. Exit");
+        System.out.println("======================================================");
         System.out.print("Enter choice: ");
         int Choice = s.nextInt();
         System.out.println("======================================================");
-        Add_student st = new Add_student();
         switch (Choice) {
             case 1:
                 int id;
@@ -55,21 +62,22 @@ public class Student_Management {
                 System.out.println("enter marks: ");
                 m=s.nextInt();
                 st.addstudent(id,n,standard,m);
-            break;
-            case 2:
-                int show;
-                show=s.nextInt();
-                st.display(show);
                 break;
-            case 3:
-                st.update_mark();
-                break;
-            case 4:
-                System.out.println("THANK YOU");
-                return;
-            default:
-                throw new AssertionError();
-        }
-        main(args);
-    }
-}
+                case 2:
+                    st.detail();
+                    break;
+                    case 3:
+                        st.update_mark();
+                        break;
+                        case 4:
+                            System.out.println("THANK YOU");
+                            s.close();
+                            return;
+                            default:
+                                throw new AssertionError();
+                            }
+                            Display(st);
+                            System.out.println("======================================================");
+                        }
+                    }
+                    
