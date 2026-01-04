@@ -22,11 +22,14 @@ public class Student_Management {
                 System.out.println(this.idlist.get(i));
                 System.out.println(this.name.get(i));
                 System.out.println(this.standard.get(i));
+                System.out.println(this.marks.get(i));
                 System.out.println("======================================================");
             }
         }
-        public void update_mark(){
-            
+        public void update_mark(int up,int var){
+                
+                System.out.println(this.marks.set(up,var));
+                System.out.println("======================================================");
         }
         
     }
@@ -46,7 +49,7 @@ public class Student_Management {
         System.out.print("Enter choice: ");
         int Choice = s.nextInt();
         System.out.println("======================================================");
-        switch (Choice) {
+        switch(Choice) {
             case 1:
                 int id;
                 String n;
@@ -67,7 +70,11 @@ public class Student_Management {
                     st.detail();
                     break;
                     case 3:
-                        st.update_mark();
+                        System.out.print("enter the id number you want changes in: ");
+                        int up=s.nextInt();
+                        System.out.print("write updated marks: ");
+                        int var=s.nextInt();
+                        st.update_mark(up-1,var);
                         break;
                         case 4:
                             System.out.println("THANK YOU");
@@ -77,7 +84,6 @@ public class Student_Management {
                                 throw new AssertionError();
                             }
                             Display(st);
-                            System.out.println("======================================================");
                         }
                     }
                     
