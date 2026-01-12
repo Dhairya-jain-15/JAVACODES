@@ -38,7 +38,12 @@ public class Employee_management {
 
     public static void Display(Employee_management em) {
         Scanner sc = new Scanner(System.in);
-        while (true) { 
+        while (true) {
+         System.out.println("EMPLOYEE MANAGEMENT:");
+        System.out.println("1. ADD EMPLOYEE");
+        System.out.println("2. DISPLAY ALL EMPLOYEE");
+        System.out.println("3. UPDATE SALARY OF EMPLOYEE");
+        System.out.println("4. EXIT ");
         System.out.print("enter choice: ");
         int choice = sc.nextInt();
         switch (choice) {
@@ -46,13 +51,10 @@ public class Employee_management {
                 System.out.print("Enter ID: ");
                 int emp_id = sc.nextInt();
                 sc.nextLine();
-
                 System.out.print("Enter Name: ");
                 String emp_name = sc.nextLine();
-
                 System.out.print("Enter Salary: ");
                 int emp_sal = sc.nextInt();
-
                 em.addEmployee(emp_id, emp_name, emp_sal);
                 break;
             case 2:
