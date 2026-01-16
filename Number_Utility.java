@@ -1,5 +1,4 @@
 package JAVACODES;
-import java.lang.Math;
 import java.util.Scanner;
 // Check prime number
 // Palindrome number
@@ -114,7 +113,7 @@ public class Number_Utility {
                 fibonacci(num);
                 break;
             default:
-                throw new AssertionError();
+                System.out.println("invalid choice");
         }
     }
 }

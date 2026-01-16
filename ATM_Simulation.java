@@ -63,7 +63,7 @@ public class ATM_Simulation {
                 exit();
                 break;
             default:
-                throw new AssertionError();
+                System.out.println("invalid choice");
         }
     }
 
