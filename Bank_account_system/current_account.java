@@ -1,4 +1,4 @@
-package JAVACODES.Bank_account_system;
- public class Current_Account extends Account{
+package JAVACODES.Bank_Account_System;
+class Current_Account extends Account{
 
     }

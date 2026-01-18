@@ -1,5 +1,5 @@
-package JAVACODES.Bank_account_system;
+package JAVACODES.Bank_Account_System;
 
-public class Saving_Account extends Account{
+class Saving_Account extends Account{
 
-    }
+}

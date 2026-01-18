@@ -1,5 +1,5 @@
-package JAVACODES.Bank_account_system;
+package JAVACODES.Bank_Account_System;
 
-public class Transaction{
+class Transaction{
         
 }

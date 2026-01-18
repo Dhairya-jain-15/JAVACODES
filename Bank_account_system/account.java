@@ -1,4 +1,4 @@
-package JAVACODES.Bank_account_system;
+package JAVACODES.Bank_Account_System;
 
 abstract class Account{
 
